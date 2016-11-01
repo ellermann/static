@@ -1,0 +1,114 @@
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.contact-modal {
+  text-align: center;
+}
+
+.modal-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-close {
+  @include horizontal-center;
+  top: 20px;
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  @include bp-min-width($tiny) {
+    top: 40px;
+  }
+}
+
+.modal-close:before,
+.modal-close:after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 6px;
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: $blue;
+}
+
+.modal-close:before {
+  transform: rotate(-45deg);
+}
+
+.modal-close:after {
+  transform: rotate(45deg);
+}
+
+.profile-modal .modal-content {
+  max-width: 600px;
+  padding: $base 20px;
+}
+
+.profile-modal p:first-of-type {
+  @include font-size(17px);
+}
+
+.profile-modal p:not(:last-child) {
+  margin-bottom: 12px;
+
+  @include bp-min-width($medium) {
+    margin-bottom: $base;
+  }
+}
+
+.modal .title__h2 {
+  margin-bottom: $base*2;
+}
+
+.modal .title__h3 {
+  margin-bottom: $base;
+
+  @include bp-min-width($medium) {
+    @include font-size(30px);
+  }
+}
+
+.contact-email {
+  margin-bottom: $base;
+}
+
+.contact-email,
+.contact-phone {
+  @include font-size(27px);
+  font-family: $serif-display;
+  font-weight: $weight-light;
+  line-height: 1;
+
+  @include bp-min-width($medium) {
+    @include font-size(54px);
+  }
+}
+
+.profile-email,
+.profile-phone {
+  @include font-size(19px);
+  font-family: $serif-display;
+  font-weight: $weight-medium;
+  line-height: 1;
+
+  @include bp-min-width($medium) {
+    @include font-size(24px);
+    font-weight: $weight-light;
+  }
+}

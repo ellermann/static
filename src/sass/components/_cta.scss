@@ -1,0 +1,8 @@
+
+.call-to-action {
+	text-align: center;
+
+	@include bp-min-width($medium) {
+		padding-top: $base*3;
+	}
+}

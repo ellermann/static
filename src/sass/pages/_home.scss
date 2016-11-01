@@ -1,0 +1,96 @@
+
+.hero {
+	display: flex;
+	align-items: center;
+	height: $base*16;
+	background: $blue $home-hero no-repeat center;
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+
+	@include bp-min-width($medium) {
+		height: $base*24;
+	}
+}
+
+.hero .title__h1 {
+	margin-bottom: $base;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base*2.5;
+	}
+}
+
+.featured-properties .container {
+	@include bp-max-width($medium) {
+		max-width: 600px;
+		padding-top: $base*2;
+		padding-bottom: $base*2;
+	}
+
+	@include bp-min-width($medium) {
+		padding-top: $base*4;
+		padding-bottom: $base*4;
+	}
+}
+
+.featured-properties .title__h2 {
+	margin-bottom: $base *2;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base*3;
+	}
+}
+
+.properties-grid .wrapper {
+	padding-bottom: $base;
+
+	@include bp-min-width($medium) {
+		box-shadow: 0 1px 3px 0 rgba(#000, .15);
+	}
+}
+
+.property-thumb {
+	margin-bottom: $base;
+}
+
+.property-title {
+	@include font-size(22px);
+	margin-bottom: 12px;
+	font-weight: $weight-bold;
+	text-align: center;
+}
+
+.property-label {
+	@include font-size(17px);
+	text-align: center;
+}
+
+.home-about {
+	display: flex;
+}
+
+.about-image,
+.about-content {
+	@include bp-min-width($medium) {
+		width: 50%;
+	}
+}
+
+.about-image {
+	background: $home-about no-repeat center;
+	background-size: cover;
+}
+
+.about-content {
+	padding: $base*2 20px;
+	background: $lt-grey;
+
+	@include bp-min-width($medium) {
+		padding: $base*3 5%;
+	}
+}
+
+.about-content .title__h3 {
+	margin-bottom: 12px;
+}

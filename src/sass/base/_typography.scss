@@ -1,0 +1,97 @@
+/**
+Class Naming Structure: block--element__modifier
+**/
+
+$sans: Helvetica, arial, sans-serif;
+$serif:	"freight-text-pro", Georgia, serif;
+$serif-display: "freight-display-pro", Georgia, serif;
+
+$base: 24px;
+
+$weight-light:  300;
+$weight-book:   400;
+$weight-medium: 500;
+$weight-bold:   700;
+
+body {
+  color: $blue;
+  font: $weight-book 1em/1.5em $serif;
+}
+
+h1,h2,h3,h4,h5 {
+  line-height: 1;
+}
+
+strong, b {
+  font-weight: $weight-bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.title__h1 {
+  @include font-size(42px);
+  font-family: $serif-display;
+  font-weight: $weight-light;
+
+  @include bp-min-width($medium) {
+    @include font-size(72px);
+  }
+}
+
+.title__h2 {
+  @include font-size(21px);
+  font-family: $serif-display;
+  font-weight: $weight-bold;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include bp-min-width($medium) {
+    @include font-size(30px);
+  }
+}
+
+.title__h3 {
+  @include font-size(21px);
+  font-family: $serif-display;
+  line-height: 1.25;
+  font-weight: $weight-bold;
+
+  @include bp-min-width($medium) {
+    @include font-size(24px);
+  }
+}
+
+.title__h4 {
+  @include bp-min-width($medium) {
+  }
+}
+
+.title__h5 {
+  @include bp-min-width($medium) {
+  }
+}
+
+.body-content h1,
+.body-content h2,
+.body-content h3,
+.body-content h4 {
+}
+
+.body-content p,
+.body-content ul,
+.body-content ol {
+  @include font-size(17px);
+}
+
+.body-content p:not(:last-child),
+.body-content ul:not(:last-child),
+.body-content ol:not(:last-child),
+.body-content blockquote:not(:last-child) {
+  margin-bottom: $base;
+}
+
+.body-content blockquote {
+}

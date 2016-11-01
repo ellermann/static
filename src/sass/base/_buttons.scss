@@ -1,0 +1,45 @@
+
+a {
+  @include global-transition(.1s);
+  color: $blue;
+
+	&:hover {
+	}
+}
+
+@mixin btn {
+  @include font-size(19px);
+  display: inline-block;
+  padding: 1em 2em;
+  background: none;
+  border: 1px solid $blue;
+  font-weight: $weight-medium;
+}
+
+.btn {
+  @include btn;
+
+  &:hover {
+    background: $blue;
+    color: #fff;
+  }
+}
+
+.btn__white {
+  border-color: #fff;
+  color: #fff;
+
+  &:hover {
+    background: #fff;
+    color: $blue;
+  }
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+  @include global-transition(.1s);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
