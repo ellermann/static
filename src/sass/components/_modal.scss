@@ -11,10 +11,6 @@
   background: #fff;
 }
 
-.contact-modal {
-  text-align: center;
-}
-
 .modal-wrapper {
   display: flex;
   align-items: center;
@@ -30,7 +26,7 @@
   width: 40px;
   height: 40px;
 
-  @include bp-min-width($tiny) {
+  @include bp-min-width($small) {
     top: 40px;
   }
 }
@@ -55,9 +51,71 @@
   transform: rotate(45deg);
 }
 
+.modal .title__h2 {
+  margin-bottom: $base*2;
+}
+
+.modal .title__h3 {
+  margin-bottom: $base;
+
+  @include bp-min-width($medium) {
+    @include font-size(30px);
+  }
+}
+
+
+// Contact Modal
+
+.contact-modal {
+  text-align: center;
+}
+
+.contact-email {
+  margin-bottom: $base;
+}
+
+.contact-email,
+.contact-phone {
+  line-height: 1;
+
+  @include bp-min-width($tiny) {
+    @include font-size(27px);
+    font-family: $serif-display;
+    font-weight: $weight-light;
+  }
+
+  @include bp-max-width($tiny) {
+    @include font-size(21px);
+  }
+
+  @include bp-min-width($medium) {
+    @include font-size(54px);
+  }
+}
+
+
+// Profile Modal
+
+.profile-modal .modal-wrapper {
+  @include bp-max-width($small) {
+    padding-top: 80px;
+  }
+}
+
 .profile-modal .modal-content {
-  max-width: 600px;
-  padding: $base 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include bp-max-width($small) {
+    overflow-y: scroll;
+    height: 100%;
+    padding-bottom: $base*2;
+  }
+
+  @include bp-min-width($small) {
+    display: flex;
+    max-width: 900px;
+  }
 }
 
 .profile-modal p:first-of-type {
@@ -72,38 +130,31 @@
   }
 }
 
-.modal .title__h2 {
-  margin-bottom: $base*2;
-}
+.profile-thumb {
+  @include bp-max-width($small) {
+    max-width: 200px;
+    margin: 0 auto $base;
+  }
 
-.modal .title__h3 {
-  margin-bottom: $base;
-
-  @include bp-min-width($medium) {
-    @include font-size(30px);
+  @include bp-min-width($small) {
+    width: 33.333%;
   }
 }
 
-.contact-email {
-  margin-bottom: $base;
-}
+.profile-info {
+  @include bp-max-width($small) {
+    text-align: center;
+  }
 
-.contact-email,
-.contact-phone {
-  @include font-size(27px);
-  font-family: $serif-display;
-  font-weight: $weight-light;
-  line-height: 1;
-
-  @include bp-min-width($medium) {
-    @include font-size(54px);
+  @include bp-min-width($small) {
+    width: 66.666%;
+    padding-left: 40px;
   }
 }
 
 .profile-email,
 .profile-phone {
   @include font-size(19px);
-  font-family: $serif-display;
   font-weight: $weight-medium;
   line-height: 1;
 

@@ -17,7 +17,7 @@
 	width: 200px;
 
 	@include bp-max-width($small) {
-		margin: 0 auto 12px;
+		margin: 0 auto 18px;
 	}
 
 	@include bp-min-width($medium) {
