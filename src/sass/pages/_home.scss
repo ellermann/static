@@ -67,7 +67,9 @@
 }
 
 .home-about {
-	display: flex;
+	@include bp-min-width($medium) {
+		display: flex;
+	}
 }
 
 .about-image,
@@ -80,6 +82,10 @@
 .about-image {
 	background: $home-about no-repeat center;
 	background-size: cover;
+
+	@include bp-max-width($medium) {
+		height: 300px;
+	}
 }
 
 .about-content {
