@@ -20,6 +20,14 @@ $(function(){
     });
   }
 
+  $('.main-nav--item__properties').bind('click', function(e){
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $('#properties').offset().top
+    }, 1000);
+  });
+
+
   modals();
 
 });
