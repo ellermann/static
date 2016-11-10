@@ -57,14 +57,17 @@
 
 .property-title {
 	@include font-size(22px);
+	padding: 0 20px;
 	margin-bottom: 12px;
 	font-weight: $weight-bold;
+	line-height: 1.2;
 	text-align: center;
 }
 
 .property-label {
 	@include font-size(17px);
 	text-align: center;
+	font-feature-settings: 'lnum' 1;
 }
 
 .home-about {
