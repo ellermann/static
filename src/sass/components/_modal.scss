@@ -70,27 +70,25 @@
   text-align: center;
 }
 
-.contact-email {
+p:not(:last-child) {
   margin-bottom: $base;
 }
 
 .contact-email,
-.contact-phone {
-  line-height: 1;
+.contact-phone,
+.contact-address {
+  line-height: 1.2;
 
-  @include bp-min-width($tiny) {
-    @include font-size(27px);
+  @include bp-min-width($medium) {
+    @include font-size(42px);
     font-family: $serif-display;
     font-weight: $weight-light;
   }
 
-  @include bp-max-width($tiny) {
+  @include bp-max-width($medium) {
     @include font-size(21px);
   }
 
-  @include bp-min-width($medium) {
-    @include font-size(54px);
-  }
 }
 
 
@@ -153,13 +151,9 @@
 }
 
 .profile-email,
-.profile-phone {
+.profile-phone,
+.profile-address {
   @include font-size(19px);
   font-weight: $weight-medium;
-  line-height: 1;
-
-  @include bp-min-width($medium) {
-    @include font-size(24px);
-    font-weight: $weight-light;
-  }
+  line-height: 1.2;
 }
