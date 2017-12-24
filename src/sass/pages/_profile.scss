@@ -1,0 +1,57 @@
+
+.profile__title {
+	margin-bottom: $base*4;
+}
+
+.profile-item {
+  @include bp-min-width($small) {
+    display: flex;
+    max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+  }
+}
+
+.profile-item__david {
+	margin-bottom: $base*4;
+}
+
+
+.profile-thumb {
+  @include bp-max-width($small) {
+    max-width: 200px;
+    margin: 0 auto $base;
+  }
+
+  @include bp-min-width($small) {
+    width: 33.333%;
+  }
+}
+
+.profile-info {
+  @include bp-max-width($small) {
+    text-align: center;
+  }
+
+  @include bp-min-width($small) {
+    width: 66.666%;
+    padding-left: 40px;
+  }
+}
+
+.profile-info__title {
+	margin-bottom: 6px;
+}
+
+.profile-email,
+.profile-phone,
+.profile-address {
+  @include font-size(19px);
+  font-weight: $weight-medium;
+  line-height: 1.2;
+}
+
+.profile__cta {
+	padding-top: $base*4;
+	padding-bottom: $base*2;
+}

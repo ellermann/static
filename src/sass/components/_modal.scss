@@ -127,33 +127,3 @@ p:not(:last-child) {
     margin-bottom: $base;
   }
 }
-
-.profile-thumb {
-  @include bp-max-width($small) {
-    max-width: 200px;
-    margin: 0 auto $base;
-  }
-
-  @include bp-min-width($small) {
-    width: 33.333%;
-  }
-}
-
-.profile-info {
-  @include bp-max-width($small) {
-    text-align: center;
-  }
-
-  @include bp-min-width($small) {
-    width: 66.666%;
-    padding-left: 40px;
-  }
-}
-
-.profile-email,
-.profile-phone,
-.profile-address {
-  @include font-size(19px);
-  font-weight: $weight-medium;
-  line-height: 1.2;
-}
