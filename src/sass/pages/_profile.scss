@@ -1,6 +1,10 @@
 
 .profile__title {
-	margin-bottom: $base*4;
+	margin-bottom: $base*2;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base*4;
+	}
 }
 
 .profile-item {
@@ -13,7 +17,11 @@
 }
 
 .profile-item__david {
-	margin-bottom: $base*4;
+	margin-bottom: $base*2;
+
+	@include bp-min-width($medium) {
+		margin-bottom: $base*4;
+	}
 }
 
 
@@ -52,6 +60,10 @@
 }
 
 .profile__cta {
-	padding-top: $base*4;
+	padding-top: $base*3;
 	padding-bottom: $base*2;
+
+	@include bp-min-width($medium) {
+		padding-top: $base*4;
+	}
 }
